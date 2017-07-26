@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Warren's Food Blog</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='css/theme.css') }}" rel="stylesheet">
+  </head>
+    <body>
+	  	<div class="container theme-showcase" role="main">
+	        <link rel="stylesheet" href="/css/theme.css">
+	        <div class="jumbotron">
+	            <h1>Warren's Food Blog</h1>
+	            <p>This is a blog to cature all the evil food i eat, so i can reflect on my sins :)</p>
+	        </div>
+	        <br>
+	        <div class="page-header">
+        		<h1>New Blog Entry</h1>
+      		</div>
+        	<h4>Now tell me what you did, and don't leave anything out.....</h4>
+			<form method="post" action="{{ url_for('entryadded') }}" enctype="multipart/form-data">
+				<hr>
+				<br>
+				<div class="panel panel-default">
+	            	<div class="panel-heading">
+	              		<h3 class="panel-title">Enter date:</h3>
+	            	</div>
+	            	<div class="panel-body">
+	              		<input type="date" name="date"><br>
+	            	</div>
+	          	</div>
+				<div class="panel panel-default">
+	            	<div class="panel-heading">
+	              		<h3 class="panel-title">Meal type:</h3>
+	            	</div>
+	            	<div class="panel-body">
+	              		<select name="mealtype">
+							<option>Breakfast</option>
+							<option>Lunch</option>
+							<option>Dinner</option>
+							<option>Snack</option>
+						</select>
+	            	</div>
+	          	</div>
+	          	<div class="panel panel-default">
+	            	<div class="panel-heading">
+	              		<h3 class="panel-title">Calories:</h3>
+	            	</div>
+	            	<div class="panel-body">
+	              		<input type="text" name="calories" style="width: 70px;"><br>
+	            	</div>
+	          	</div>
+				<div class="panel panel-default">
+	            	<div class="panel-heading">
+	              		<h3 class="panel-title">Meal Description:</h3>
+	            	</div>
+	            	<div class="panel-body">
+	              		<input type="text" name="description" style="width: 500px;"><br>
+	            	</div>
+	          	</div>
+				<div class="panel panel-default">
+	            	<div class="panel-heading">
+	              		<h3 class="panel-title">Upload a Photo (JPG/JPEG only)</h3>
+	            	</div>
+	            	<div class="panel-body">
+	              		<input type="file" name="file">
+	            	</div>
+	          	</div>
+				<br>
+			  	<input type="submit" value="SUBMIT"/>
+			  	<br>
+			  	<br>
+			  	<a href=/><button type="button" class="btn btn-lg btn-default">Back to main page</button></a><br>
+			</form>
+		</div>
+	</body>
+</html>
