@@ -1,11 +1,11 @@
 import os, time, boto, uuid, datetime, redis
-r = redis.Redis(host='redis-17715.c14.us-east-1-3.ec2.cloud.redislabs.com', port='17715', password='szTdFO88AJjfLxw3')
+r = redis.Redis(host='redis-17715.c14.us-east-1-3.ec2.cloud.redislabs.com', port='17715', password='XXXX')
 #r = redis.Redis(host='127.0.0.1', port='6379')
 from flask import Flask, render_template, redirect, request, url_for, make_response
 from werkzeug import secure_filename
 
-ecs_access_key_id = '131396950294169841@ecstestdrive.emc.com'  
-ecs_secret_key = 'G0tD9sxBppHMduRMNIGOq9492BRBy7riSY5kiXDP'
+ecs_access_key_id = 'XXXX@ecstestdrive.emc.com'  
+ecs_secret_key = 'XXXX'
 
 session = boto.connect_s3(ecs_access_key_id, ecs_secret_key, host='object.ecstestdrive.com')  
 bname = 'foodblog'
